@@ -1,0 +1,276 @@
+/* Estilos globales */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.815)), url('../images/header.gif');
+    background-size: cover;
+    background-position: center; /* Centra la imagen */
+    color: #fff;
+    text-align: center;
+    padding: 0;  /* Eliminar padding */
+    height: 100vh; /* Hacer que ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.header section{ /* esto es para que abarque toda la 1ra parte */
+    margin-top: 0;
+    min-height: 100vh;
+}
+
+.header .name {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: slideIn 1s ease-out forwards;
+}
+
+.header .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+.header span {
+    font-weight: bold;
+    color: #F8A5C2;
+}
+
+.btn-contact {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #F8A5C2;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn-contact:hover {
+    background-color: #811f81;
+    color: #fff;
+}
+
+/* Sobre mi */
+.about {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about .btn-contact {
+    margin-top: 20px;
+}
+
+.about-content {
+
+    align-items: center;
+}
+
+.about-photo {
+    width: 200px; /* Tamaño de la foto */
+    height: 200px;
+    border-radius: 50%; /* Foto circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+    border: 2px solid #ccc; /* Borde suave alrededor de la foto */
+}
+
+/* Habilidades */
+.skills {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Portfolio */
+.portfolio {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project h3{
+    color: #811F81;
+}
+
+.project {
+    width: 45%;
+    margin-bottom: 30px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Descargar*/
+.download-cv {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #F8A5C2;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.download-button:hover {
+    background-color: #811F81;
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(to right, #F8A5C2, #D15E9E, #811F81, #5A2A6B, #000000);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    margin: 0 15px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.social-icon:hover {
+    color: #000000;
+}
+
+/* Animations */
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade-in al scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adicional */
+.skills-list .skill i {
+    font-size: 3rem;
+    color: #811F81;
+    margin-bottom: 10px;
+}
+
+.skills-list .skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    margin: 0 15px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.social-links a:hover {
+    color: #000000;
+}
