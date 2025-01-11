@@ -254,16 +254,6 @@ body {
 }
 
 /* Adicional */
-.skills-list .skill i {
-    font-size: 3rem;
-    color: #811F81;
-    margin-bottom: 10px;
-}
-
-.skills-list .skill h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
 
 .social-links a {
     margin: 0 15px;
@@ -275,12 +265,50 @@ body {
     color: #000000;
 }
 
-@media (max-width: 768px) {
-    .skills-list, .project-list {
-        flex-direction: column;
-        align-items: center;
+body {
+    cursor: url('../images/Arrow.cur'), auto;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Mascota */
+.mascota {
+    position: absolute;
+    bottom: 30px; /* altura */
+    left: 0;
+    width: 50px; /* tamaño */
+    animation: caminar 90s infinite linear;
+}
+
+.mascota-img {
+    width: 150%;
+    height: auto;
+}
+
+/* Animación de caminar */
+@keyframes caminar {
+    0% {
+        transform: translateX(0);
     }
-    .skill, .project {
-        width: 100%;
+    50% {
+        transform: translateX(100vw);
     }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.project-list {
+    word-wrap: break-word;
 }
