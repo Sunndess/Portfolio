@@ -274,3 +274,13 @@ body {
 .social-links a:hover {
     color: #000000;
 }
+
+@media (max-width: 768px) {
+    .skills-list, .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill, .project {
+        width: 100%;
+    }
+}
