@@ -18,7 +18,7 @@ body {
 
 /* Header */
 .header {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.815)), url('../images/header.gif');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.952)), url('../images/header.gif');
     background-size: cover;
     background-position: center; /* Centra la imagen */
     color: #fff;
@@ -266,8 +266,12 @@ body {
 }
 
 body {
-    cursor: url('../images/Arrow.cur'), auto;
+    cursor: url('../images/Arrow.cur') 16 16, auto;
 }
+
+.btn-contact, a, btn-download {
+    cursor: url('../images/Hand2.cur') 16 16, pointer;
+  }
 
 body, html {
     overflow-x: hidden;
@@ -312,3 +316,38 @@ img {
 .project-list {
     word-wrap: break-word;
 }
+
+/* CALL TO ACTION */
+
+@keyframes background-animation {
+    0% {
+      background-color: #F8A5C2;
+    }
+    50% {
+      background-color: #D15E9E;
+    }
+    100% {
+      background-color: #F8A5C2;
+    }
+  }
+  
+  .btn-contact {
+    display: inline-block;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #F8A5C2;
+    border-radius: 5px;
+    cursor: url('../images/Hand2.cur') 16 16, pointer;
+    animation: background-animation 3s ease-in-out infinite;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-contact:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  
